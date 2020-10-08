@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<header>
+		<!-- Logo and nav bar here-->
+		<h1 class="logo">Dehvi's Warframe hub</h1>
+		<nav>
+			<ul class="nav">
+				
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Donate</a></li>
+			</ul>
+		</nav>
+	</header>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title%} Home Page {%endblock%}
+
+{% block content %}
+	<div class="container">
+		<!-- Planet time cycles -->
+		<div class="cycles-container">
+			<div class="cycle-box cycle-box-1">
+				<h2>Earth</h2>
+				<p class="cycle-state">Currently: <span>{{ earth['state'] }} </span></p>
+				<div class="timer">
+					<p>{{ earth['timeLeft']}}</p>
+				</div>
+			</div>	
+			<div class="cycle-box cycle-box-2">
+				<h2>Cetus</h2>
+				<p class="cycle-state">Currently:<span> {{ cetus['state']}} </span></p>
+				<div class="timer">
+					<p>{{ cetus['timeLeft']}}</p>
+				</div>
+			</div>	
+			<div class="cycle-box cycle-box-3">
+				<h2>Orb Vallis</h2>
+				<p class="cycle-state">Currently: <span> {{ vallis['state'] }} </span></p>
+				<div class="timer">
+					<p>{{ vallis['timeLeft']}}</p>
+				</div>
+			</div>	
+			<div class="cycle-box cycle-box-4">
+				<h2>Cambion Drift</h2>
+				<p class="cycle-state">Currently:<span> {{ cambion['active']}} <span></p>
+				<div class="timer">
+					<p> {{ cambion['timeLeft']}} </p>					
+				</div>
+			</div>		
+		</div>
+		<!-- Fissures info -->
+		<div class="fissures">
+			<h1>Fissures</h1>
+			{% for fissure in fissures: %}
+				<div class="relics">
+					<h3>{{fissure['tier']}}</h3>
+					<p>{{fissure['missionType']}} | {{fissure['enemy']}} | {{fissure['node']}}</p>
+					<p class="fissure-timer timer">{{fissure['eta']}}</p>
+				</div>
+			{%endfor%}
+
+		</div>
+		<!-- Sortie stuff here-->
+		<div class="sorties-container">
+		  <h1 class="title">Sortie</h1>
+		  
+		  <h2 class="boss">{{sortie_boss_info['boss']}}</h2>
+		  
+		  <p class="sortie-timer timer">{{sortie_boss_info['eta']}}</p> 
+
+			<div class="mission-container">
+			{% for sor in sortie: %}
+	  			<div class="mission-info sortie-style"> {{sor['mission_type']}} - {{sor['node']}} | {{sor['modifier']}} </div>
+		  	{%endfor%}
+		  	</div>
+		  
+		</div>
+		
+	</div>
+{% endblock%}

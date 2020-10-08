@@ -1,0 +1,182 @@
+* {
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-size: 1.15rem;
+	text-align: center;
+}
+
+/* ----- NAVBAR ---- */
+header {
+	padding-top: 10px;
+}
+
+.logo {
+	font-size: 2.8rem;
+	width: 100vw;
+
+}
+h1 {
+	text-align: center;
+}
+
+nav {
+	width: 100vw;
+	background-color: #D6EFFF;
+	text-align: left;
+}
+
+nav a {
+	text-decoration: none;
+	color: black;
+	padding: 2vw;
+}
+
+a:hover {
+	background-color: #C6E9FF;
+	
+}
+
+ul {
+	display: flex;
+}
+
+
+li {
+	list-style-type: none;
+	margin: 0 2vw;
+	padding: 8px;
+	font-size: 3vh;
+}
+
+@media only screen and (max-width: 500px) {
+	ul {
+		flex-direction: column;
+	}
+
+	li {
+		margin: 0;
+	}
+
+	a {
+		display: block;
+	}
+
+
+}
+
+/*##### TIMER STYLE   #########*/
+
+.timer {
+	background: green;
+	padding: 10px;
+	margin-top: 10px;
+	color: white;
+	min-width: 70px;
+	display: inline-block;
+}
+
+
+/* ---- Cycle boxes ----*/
+.container {
+	background: #ddd;
+	margin-top: 1rem;
+}
+
+.cycles-container {
+	display: flex;
+	justify-content: space-around;
+}
+.cycle-box {
+	width: 100vw;
+	margin: 10px;
+	padding: 10px;
+	background-color: #ccc;
+}
+.cycle-box span {
+	font-style: bold;
+	font-size: 1.95rem;
+}
+.cycle-state {
+	font-size: .995rem;
+}
+@media only screen and (max-width: 700px) {
+	.cycles-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+/*---- Fissures-------*/
+
+.fissures {
+	text-align: left;
+	padding: 3vw;
+
+}
+h3 {
+	padding-right: 15px;
+}
+
+.relics {
+	padding: 2vw;
+	margin: 1vw;
+	background: #bbb;
+	display: flex;
+	justify-content: space-between;
+}
+
+.fissure-timer {
+	background: green;
+	padding: 10px;
+	margin-top: 10px;
+	color: white;
+	font-size: .955rem;
+	display: inline-block;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+	.fissures {
+		text-align: left;
+		padding: 3vw;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.relics {
+		padding: 2vw;
+		margin: 1vw;
+	}
+}
+
+/*----- Sortie -------*/
+
+
+*/
+.sorties-container {
+	
+	padding: 10px;
+	margin: 1vw;
+	
+}
+
+.title {
+	font-size: 3.0rem;
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+
+.boss {
+	display: inline-block;
+}
+.sortie-style {
+	padding: 20px;
+	background: #ccc;
+}
